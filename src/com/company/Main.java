@@ -11,10 +11,7 @@ public class Main {
 
     public static boolean checkIP(String IpAdress)
     {
-        String regular  = "(\\d{1,2}|([01])\\" + "d{2}|2[0-4]+\\d|25[0-5])" + "\\."
-                + "(\\d{1,2}|([01])\\" + "d{2}|2[0-4]+\\d|25[0-5])" + "\\."
-                + "(\\d{1,2}|([01])\\" + "d{2}|2[0-4]+\\d|25[0-5])" + "\\."
-                + "(\\d{1,2}|([01])\\" + "d{2}|2[0-4]+\\d|25[0-5])";
+        String regular  = "^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}" + "([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$";
 
         Pattern pattern = Pattern.compile(regular );
         Matcher match= pattern.matcher(IpAdress);
